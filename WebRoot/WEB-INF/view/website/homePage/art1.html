@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base href="#(basepath)">
+    <meta charset="UTF-8">
+    <title>文章细究</title>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"  rel="stylesheet">
+    <link rel="stylesheet"  type="text/css"  href="asset/css/article.css">
+    <link rel="stylesheet"  type="text/css"  href="asset/css/webHeadNav.css">
+</head>
+<body>
+<input type="hidden" name="comment.id"  value="#(comment.id??)"  />
+<!-- <div class="blog_header"> -->
+<!--     <div class="blog_header_title"> -->
+<!--         <div class="row"> -->
+<!--             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 blog_header_title_logo"> -->
+<!--                 <a class="logo" style='text-decoration:none;'>起程·博客</a> -->
+<!--             </div> -->
+<!--             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 blog_header_title_option"> -->
+<!--                 <div class="row"> -->
+<!--                     <div class="col-sm-7"> -->
+<!--                         <a class="first_page" href="website/homePage">首页</a> -->
+<!--                         <a class="first_page">发现</a> -->
+<!--                         <a class="first_page">关注</a> -->
+<!--                         <a class="first_page">消息</a> -->
+<!--                     </div> -->
+<!--                     <div class="col-sm-5"> -->
+<!--                         <div class="blog_search"> -->
+<!--                             <input type="text" placeholder="Search"/> -->
+<!--                             <button type="button">搜索</button> -->
+<!--                         </div> -->
+<!--                     </div> -->
+<!--                 </div> -->
+<!--             </div> -->
+<!--             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 blog_header_title_person"> -->
+<!--                 <div class="blog_header_title_person_right"> -->
+<!--                     <div class="blog_header_title_person_sp"> -->
+<!--                         <a>登录</a> -->
+<!--                         <a>注册</a> -->
+<!--                         <a href="website/article">写博客</a> -->
+<!--                     </div> -->
+<!--                 </div> -->
+<!--             </div> -->
+<!--         </div> -->
+<!--     </div> -->
+<!-- </div> -->
+
+<!-- 主页面导航条 -->
+		<div class="person_nav">
+			<nav class="navbar navbar-default">
+			  <div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand blog_person_logo" style="height:60px;color:#337ab7" href="#">启程·博客</a>
+			    </div>
+			
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav">
+			        <li><a href="website/homePage">首页</a></li>
+			        <li><a href="#">发现</a></li>
+			        <li><a href="#">关注</a></li>
+			        <li><a href="#">下载app</a></li>      
+			      </ul>
+			      <form class="navbar-form navbar-left">
+			        <div class="input-group">
+			            <input type="text" class="form-control" placeholder="Search">
+				        <span class="input-group-btn">
+					        <button type="submit" class="btn btn-default">
+					        	<span class="glyphicon glyphicon-search"></span>
+					        </button>
+					    </span>
+				    </div>
+			      </form>
+			      <!--没有登录的情况-->
+			      <ul class="nav navbar-nav navbar-right" id="logstate">
+			          <li><a class="blog_head_nav_login" id="sign_in" href="website/login">登录</a></li>
+		              <li><a class="blog_head_nav_signup" style="color:red" id="sign_up" href="website/register">注册</a></li>
+			          <li class="dropdown" id = "loginfo">
+		                 <a href="#" class="dropdown-toggle" style="margin-top:-12px;margin-bottom:-12px" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img id="logicon" class="img-circle blog_head_icon" src="/asset/img/boke.jpg" alt="头像"/> <span class="caret"></span></a>
+		                 <ul class="dropdown-menu">
+				            <li><a href="website/user">我的主页</a></li>
+				            <li><a href="#">个人信息</a></li>
+				            <li><a href="#">喜欢的文章</a></li>
+				            <li role="separator" class="divider"></li>
+				            <li><a href="#">退出登录</a></li>
+		                </ul>
+		             </li> 
+						 <li class="blog_head_nav_a"><a class="blog_head_nav_write"  target="_blank" href="website/article">
+						     <span class="glyphicon glyphicon-pencil"></span>写博客
+						     </a>
+						 </li>
+			     </ul>
+			  </div>
+		</div>
+	</nav>
+</div>
+
+
+
+<div class="blog_main_container">
+    <div class="line"><div></div></div>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h1 id="title"></h1>
+                <span id="aut"></span>
+                <img id="img_h">
+                <div id="content"></div>
+                <div class="line dline"><div></div></div>
+                <div class="comment">
+                	<div class="row ipu_row">
+                		<input type="text" class="form-control" id="ipu_com" placeholder="雁过留声~">
+                		<button id="but_com"  class="btn btn-default">发表</button>
+                	</div>
+                	<div id="loc_comment"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body >
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+var comN;
+var comOK;
+var comYES;
+var numgn;
+var numbn;
+
+function getJsonObjLength(jsonObj) {
+		var Length = 0;
+        for (var item in jsonObj) {
+           Length++;
+       }
+        return Length;
+}
+
+function createDiv(i){
+	var ht = '<p id="p_com'+i+'"></p><div>'+
+			'<button onclick="comment_G(this)" class="butGN glyphicon glyphicon-thumbs-up" id="but_GN'+i+'" ><p id="numGN"></p>'+
+			'</button><button onclick="comment_B(this)" class="butBN glyphicon glyphicon-thumbs-down" id="but_BN'+i+'">'+
+			'<p id="numBN"></p></button></div>'
+	$("#loc_comment").prepend(ht);
+}
+
+function getComData(){
+	$("#loc_comment").html("");
+	$.ajax({
+			type:"get",
+			datatype:"json",
+			url:"website/homePage/com_list?title_id=#(mystr??)",
+			success:function(cdata){
+				console.log(cdata);
+				comN = getJsonObjLength(cdata.comData);
+				for(i=0;i<comN;i++){
+					createDiv(i);
+					$("#p_com"+i).text(cdata.comData[i].comt + " 小雨哥评：" + cdata.comData[i].comc);
+ 					$("#but_GN"+i).attr("name",cdata.comData[i].id);
+ 					$("#but_BN"+i).attr("name",cdata.comData[i].id);
+ 					userandcomment(cdata.comData[i].id);
+ 	
+ 					$("#numGN").text(numgn+"赞");
+ 					$("#numBN").text(numbn+"踩");
+ 					if(!comOK){		
+						if(comYES){
+							$("#but_GN"+i).addClass("blue");
+							$("#but_GN"+i).attr("onclick","GNgone()");
+							$("#but_BN"+i).attr("onclick","GNgone()");
+							}else{
+								$("#but_BN"+i).addClass("red");
+								$("#but_BN"+i).attr("onclick","BNgone()");
+								$("#but_GN"+i).attr("onclick","BNgone()");
+							}
+ 	 				}
+				}	
+			}
+		});
+}
+
+$(document).ready(function(){
+	if(#(state??)){
+		$("#sign_in").hide();
+		$("#sign_up").hide(); 
+		document.getElementById("logicon").src = "#(icon??)"; 
+	}else{
+		$("#loginfo").hide();
+		}
+	$.ajax({
+		type:"get",
+		datatype:"json",
+		url:"website/homePage/art?title_id=#(mystr??)",
+		//window.location.search
+		success:function(result){
+		console.log(result);
+		document.getElementById("img_h").src=result.artData[0].c_url_img;
+		$("#title").text(result.artData[0].title);
+		$("#content").html(result.artData[0].content);
+		$("#aut").text("文/"+result.artData[0].author);
+		getComData();
+		}
+	});		
+});
+
+$("#but_com").click(function(){  
+	var com_c=$("#ipu_com").val();
+	document.getElementById("ipu_com").value="";
+	if(com_c!=""){
+		$.ajax({
+			type:"post",
+			url:"website/homePage/com_submit",
+			data:{"comc":com_c,"comt":(new Date()).toLocaleString(),"comac":#(mystr??),"comN":comN+1,"title_id":#(mystr??)},
+			success:function(data){
+				alert(comN+1);
+				getComData();
+			}
+		});
+	}
+});
+
+function comment_G(but){
+    $.ajax({
+    	type:"post",
+    	datatype:"json",
+		url:"website/homePage/butGN",
+		data:{"id":but.name},
+		success:function(data){
+			getComData();
+        }
+    });
+}
+function comment_B(but){
+    $.ajax({
+    	type:"post",
+    	datatype:"json",
+		url:"website/homePage/butBN",
+		data:{"id":but.name},
+		success:function(data){
+			getComData();
+        }
+    });
+}
+
+function userandcomment(but_id){
+	 $.ajax({
+	    	type:"post",
+	    	datatype:"json",
+			url:"website/homePage/uandc",
+			data:{"id":but_id},
+			async:false,
+			success:function(data){
+				comOK=data.comO;
+				comYES=data.Yes;
+				numgn=data.numgn;
+				numbn=data.numbn;
+	        }
+	    });
+}
+function GNgone(){
+	alert("已经赞过了！！！");
+}
+function BNgone(){
+	alert("已经踩过了！！！");
+}
+</script>
+  
+</html>

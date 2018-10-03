@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base href="#(basepath)">
+    <meta charset="UTF-8">
+    <title>WHUT博客</title>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"  rel="stylesheet">
+    <link rel="stylesheet"  type="text/css"  href="asset/css/common.css">
+    <link rel="stylesheet"  type="text/css"  href="asset/css/webHeadNav.css">
+</head>
+<body>
+<!-- 主页面导航条 -->
+		<div class="person_nav">
+			<nav class="navbar navbar-default">
+			  <div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand blog_person_logo" style="height:60px;color:#337ab7" href="#">启程·博客</a>
+			    </div>
+			
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav">
+			        <li><a href="website/homePage">首页</a></li>
+			        <li><a href="#">发现</a></li>
+			        <li><a href="#">关注</a></li>
+			        <li><a href="#">下载app</a></li>      
+			      </ul>
+			      <form class="navbar-form navbar-left">
+			        <div class="input-group">
+			            <input type="text" class="form-control" placeholder="Search">
+				        <span class="input-group-btn">
+					        <button type="submit" class="btn btn-default">
+					        	<span class="glyphicon glyphicon-search"></span>
+					        </button>
+					    </span>
+				    </div>
+			      </form>
+			      <!--没有登录的情况-->
+			      <ul class="nav navbar-nav navbar-right" id="logstate">
+			          <li><a class="blog_head_nav_login" id="sign_in" href="website/login">登录</a></li>
+		              <li><a class="blog_head_nav_signup" style="color:red" id="sign_up" href="website/register">注册</a></li>
+			          <li class="dropdown" id = "loginfo">
+		                 <a href="#" class="dropdown-toggle" style="margin-top:-12px;margin-bottom:-12px" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img id="logicon" class="img-circle blog_head_icon" src="/asset/img/boke.jpg" alt="头像"/> <span class="caret"></span></a>
+		                 <ul class="dropdown-menu">
+				            <li><a href="website/user">我的主页</a></li>
+				            <li><a href="#">个人信息</a></li>
+				            <li><a href="#">喜欢的文章</a></li>
+				            <li role="separator" class="divider"></li>
+				            <li><a href="website/homePage/logout">退出登录</a></li>
+		                </ul>
+		             </li> 
+						 <li class="blog_head_nav_a"><a class="blog_head_nav_write"  target="_blank" href="website/article">
+						     <span class="glyphicon glyphicon-pencil"></span>写博客
+						     </a>
+						 </li>
+			     </ul>
+			  </div>
+		</div>
+	</nav>
+</div>
+    <div class="line"><div></div></div>
+    <div class="blog_main_container" style="background-image:url(/asset/img/bodybg.png);">
+        
+        <div class="container">
+            <div class="row blog_main_container_row">
+                <div class="col-lg-8 col-md-8 col-sm-8 blog_main_container_left">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div id="ppt" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#ppt" data-slide-to="0" class="active"></li>
+                                    <li data-target="#ppt" data-slide-to="1"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <a class="item active" href="http://www.whcyz.com/article/detail/1-149">
+                                        <img style="width: 100%;height: 350px" src="http://www.whcyz.com/upload/images/20141216/article/1418698452634.jpg" alt="图片1">
+                                        <div class="carousel-caption">
+                                            <h3>股权众筹，投资人你准备好了吗？</h3>
+                                        </div>
+                                    </a>
+                                    <a class="item" href="https://www.douban.com/people/zzzzzz6/status/2224848045/">
+                                        <img style="width: 100%;height: 350px" src="https://img1.doubanio.com/view/status/m/public/60cfebc9ef94808.webp" alt="豆瓣">
+                                        <div class="carousel-caption">
+                                           <h3>都小班</h3>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#ppt" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#ppt" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+
+                            <div class="blog_articles" id="cichu"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-3 col-sm-3 blog_main_container_right">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+							<h3>热门文章</h3>
+							<h4>昨夜雨疏风骤</h4>
+							<label>点击量：10万+</label>
+							<h4>昨夜雨疏风骤</h4>
+							<label>点击量：10万+</label>
+							<h4>昨夜雨疏风骤</h4>
+							<label>点击量：10万+</label>
+							<h4>昨夜雨疏风骤</h4>
+							<label>点击量：10万+</label>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+							<h3>热门评论</h3>
+							<h4>昨夜雨疏风骤</h4>
+							<label>点击量：10万+</label>
+							<h4>昨夜雨疏风骤</h4>
+							<label>点击量：10万+</label>
+							<h4>昨夜雨疏风骤</h4>
+							<label>点击量：10万+</label>
+							<h4>昨夜雨疏风骤</h4>
+							<label>点击量：10万+</label>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="blog_footer">
+        <div class="blog_footer_link">
+            <div class="container">
+                <h4>友情链接</h4>
+                <div class="line"><div></div></div>
+                <p class="blog_links">
+                    <a href="http://www.xiaomuedu.com" target="_blank">小木学堂</a>
+                    <a href="http://www.xiaomuedu.com" target="_blank">小木学堂</a>
+                    <a href="http://www.xiaomuedu.com" target="_blank">小木学堂</a>
+                    <a href="http://www.xiaomuedu.com" target="_blank">小木学堂</a>
+                    <a href="http://www.xiaomuedu.com" target="_blank">小木学堂</a>
+                    <a href="http://www.xiaomuedu.com" target="_blank">小木学堂</a>
+                    <a href="http://www.xiaomuedu.com" target="_blank">小木学堂</a>
+                </p>
+            </div>
+       	</div>
+        <div class="blog_footer_copyright">Copyright © Our Blog 鄂ICP备*******号</div>
+    </div>
+</body >
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+		function createDiv(i){
+			var ht = '<div class="line"><div></div></div>'+
+			'<div class="aa row">'+
+			'<div class="col-lg-8 left_arts">'+
+			    '<h1><a id="title'+i+'"></a></h1>'+
+			    '<p class="ll" id="aut'+i+'">文/苏</p>'+
+			    '<p id="s_content'+i+'"></p>'+
+			'</div>'+
+			'<div class="col-lg-4 right_imgs">'+
+			    '<a><img  id="xiaoyu'+i+'" ></a>'+
+			'</div>'+
+			'</div>';
+			$("#cichu").prepend(ht);
+		}
+		
+		function ct(u){
+			$.ajax({
+				type:"get",
+				datatype:"json",
+				url:"website/homePage/list",
+				success:function(result){
+				console.log(result);
+				for(i=0;i<u;i++){
+					createDiv(i);
+					document.getElementById("xiaoyu"+i).src=result.jsonData[i].c_url_img;
+					$("#title"+i).text(result.jsonData[i].title);
+					document.getElementById("title"+i).href=result.jsonData[i].c_url;
+					$("#s_content"+i).text(result.jsonData[i].s_content);
+					$("#aut"+i).text("文/"+result.jsonData[i].author);
+					}
+			}});	
+		}
+		
+		$(document).ready(function(){
+			console.log(#(state??));
+			console.log();
+			//alert("#(icon??)");
+ 			//console.log(#(icon??));
+			if(#(state??)){
+				$("#sign_in").hide();
+				$("#sign_up").hide(); 
+				document.getElementById("logicon").src = "#(icon??)"; 
+			}else{
+				$("#loginfo").hide();
+				}
+			ct(10);
+		});
+  </script>
+  
+</html>

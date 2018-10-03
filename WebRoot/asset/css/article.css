@@ -1,0 +1,127 @@
+html,body{
+    height: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB",
+ "Hiragino Sans GB W3","Times New Roman", "幼圆","Microsoft YaHei UI", "Microsoft YaHei",
+ "WenQuanYi Micro Hei", sans-serif;
+}
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+/* .blog_header{ */
+/*     height: 60px; */
+/*     margin-bottom: -60px; */
+/*     position: relative; */
+/*     background:white; */
+/* } */
+/* .blog_header_title{ */
+/*     height: 60px; */
+
+/* } */
+/* .blog_header_title_logo{ */
+/*     height: 60px; */
+
+/* } */
+/* .blog_header_title_option{ */
+/*     height: 60px; */
+/* } */
+/* .blog_header_title_blank{ */
+/*     height: 60px; */
+/* } */
+/* .blog_header_title_person{ */
+/*     height: 60px; */
+/*     float: right; */
+/* } */
+/* .logo{ */
+/*     font-size: 30px; */
+/*     font-family: "��Բ";???? */
+/*     display: block; */
+/*     text-align: center; */
+/*     margin-top: 15px; */
+/* } */
+/* .first_page{ */
+/*     display: inline-block; */
+/*     width: 80px; */
+/*     font-size: 25px; */
+/*     margin-top: 18px; */
+/* } */
+/* .blog_search{ */
+/*     float: right; */
+/*     margin-top: 20px; */
+/* } */
+/* .blog_header_title_person_right{ */
+/*     float: right; */
+/* } */
+/* .blog_header_title_person_sp{ */
+/*     display: inline-block; */
+/*     margin-top: 32px; */
+/*     margin-right: 30px; */
+/* } */
+/* .blog_header_title_person_sp a{ */
+/*     font-size: 18px; */
+/* } */
+
+
+.blog_main_container{
+    background: white;
+    min-height: 100%;
+    padding: 65px 0px 0px 0px;
+}
+.panel{
+    margin-top: 30px;
+    border: none;
+}
+.panel-body{
+    padding: 0px 270px 0px 270px;
+}
+.panel-body span{
+    font-family: "幼圆";
+}
+#content{
+    font-family: "Microsoft YaHei";
+    font-size: 20px;
+}
+.panel-body img{
+    width: 100%;
+}
+.dline{
+	margin-top:30px;
+}
+#ipu_com{
+	margin-left:35px;
+	margin-bottom:20px;
+	width:500px;
+	display: inline-block;
+}
+#but_com{
+		display: inline-block;
+}
+.ipu_row{
+	margin-top:15px;
+
+}
+
+.line div {
+    height: 1px;
+    border-bottom: 1px solid #ddd;
+    margin:25px 100px -10px 100px;
+}
+.butGN{
+	margin-left:400px;	
+	border:none;
+	background:white;
+}
+.butGN_T{
+	margin-left:480px;	
+}
+.butBN{
+	margin-left:50px;
+	border:none;
+	background:white;
+}
+.blue{
+	color:blue;
+}
+.red{
+	color:red;
+}
